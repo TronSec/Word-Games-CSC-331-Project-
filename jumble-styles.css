@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*background: linear-gradient(to bottom, lightslategray, blueviolet);*/
+  background: linear-gradient(to top, aliceblue, lightblue);
+  /*background: linear-gradient(to top, black, lightslategray);*/
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image: linear-gradient(
+    to right,
+    #d3f4fb,
+    #9de3f6,
+    #59d7ee,
+    #53dfd1
+  );
+  background-size: 400%;
+  animation: background-animation 20s infinite alternate;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/************************  Nav Bar  ************************/
+li,
+a,
+button {
+  font-weight: 500px;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  background-color: #24252a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.navLinks {
+  /* Remove bullet points */
+  list-style: none;
+}
+
+/* Target each item within the element of class navLinks */
+.navLinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navButton {
+  padding: 9px 25px;
+  background-color: rgb(135, 206, 250);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.navButton:hover {
+  background-color: rgba(135, 206, 250, 0.5);
+}
+
+/************************ Game Area ************************/
+.photo {
+  position: absolute;
+  margin-left: 65%;
+  top: 130px;
+  object-fit: cover;
+  width: 30%;
+  height: 526px;
+  border: solid black 3px;
+  border-radius: 20px;
+}
+
+.gameTimer {
+  text-align: center;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 60%;
+  background: rgb(65, 61, 61);
+  color: white;
+  width: 15%;
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.scoreContainer {
+  text-align: center;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 80%;
+  background: rgb(65, 61, 61);
+  color: white;
+  width: 15%;
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.hintCounter {
+  text-align: center;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(65, 61, 61);
+  width: 20%;
+  padding: 8px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 68%;
+  margin-top: 11%;
+  position: absolute;
+}
+
+.endMenuContainer {
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  /*transform: translate(-50%, -50%);*/
+  z-index: 1;
+  text-align: center;
+  width: 70%;
+  height: 60%;
+
+  border-radius: 15px;
+}
+
+.gameOverMessage {
+  font-size: 2em;
+  height: 10%;
+  width: 45%;
+  margin-top: 10px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.gameResultContainer {
+  height: 140px;
+
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  top: 15%;
+  left: 12%;
+  width: 75%;
+
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gameResult {
+  border: solid black;
+  width: 40%;
+  height: 80px;
+
+  margin: auto;
+
+  text-align: center;
+  font-size: 1.8em;
+  border-radius: 15px;
+
+  color: white;
+  background: black;
+}
+
+.buttonContainer {
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+
+  width: 75%;
+
+  position: absolute;
+  top: 55%;
+  left: 12%;
+
+  text-align: center;
+}
+
+.endMenuButton {
+  text-align: center;
+  font-size: 1.2em;
+
+  width: 30%;
+  height: 70px;
+
+  margin: 15px;
+  margin-top: 30px;
+
+  padding: 10px;
+  border-radius: 15px;
+
+  transition: 300ms;
+  color: black;
+  background: linear-gradient(to bottom, pink, violet, blueviolet);
+}
+
+.endMenuButton:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+}
+
+.endMenuButton:active {
+  background: linear-gradient(to bottom, aliceblue, lightblue, aqua);
+}
+
+.wordPairContainer {
+  margin: 40px;
+  width: 50%;
+}
+
+.jumbledWordContainer {
+  text-align: center;
+  margin-top: 5px;
+  border: solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 70px;
+  width: 90%;
+  background: linear-gradient(to right, beige, bisque);
+}
+
+.letterContainer {
+  margin: auto;
+  position: relative;
+  top: 19px;
+}
+
+.letterBox {
+  margin: auto;
+  background-color: black;
+  border: solid black;
+  color: white;
+  padding: 8px;
+  width: 20px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 3px;
+
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hintArea {
+  width: 10%;
+  height: 30px;
+
+  display: inline;
+  float: right;
+}
+
+.hintButton {
+  text-align: center;
+  border-radius: 20px;
+
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+.inputArea {
+  background: linear-gradient(to bottom, bisque, beige);
+  border: solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 60px;
+  text-align: center;
+
+  padding: 8px;
+  width: 90%;
+}
+
+.inputBox {
+  margin: auto;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 50px;
+  height: 100%;
+  border: solid black;
+  border-radius: 5px;
+
+  text-align: center;
+  font-size: 1.3em;
+
+  background: rgb(65, 61, 61);
+  color: white;
+
+  transition: 500ms;
+}
+/*.inputBox {
+  margin: auto;
+  height: 33px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+}*/
+
+.finalPairContainer {
+  margin: auto;
+  width: 80%;
+}
+
+/* Final Question */
+.finalPairContainer > div {
+  font-size: 1.2em;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+
+  transition: 800ms;
+}
+
+.questionPrompt {
+  background: black;
+  color: white;
+
+  width: 60%;
+
+  text-align: center;
+  margin: auto;
+  border-radius: 15px;
+}
+
+/*.endMenuContainer {
+  top: 200px;
+  background: white;
+  margin: auto;
+  border: solid black;
+  height: 50%;
+  width: 50%;
+}*/

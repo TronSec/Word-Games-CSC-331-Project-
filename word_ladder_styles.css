@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /*background: linear-gradient(to left, rgb(225, 234, 241), white);*/
+  /*background: linear-gradient(to right, aliceblue, lightskyblue);*/
+  background-image: linear-gradient(
+    to right,
+    #d3f4fb,
+    #9de3f6,
+    #59d7ee,
+    #53dfd1
+  );
+  background-size: 400%;
+  animation: background-animation 20s infinite alternate;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/************************  Nav Bar  ************************/
+li,
+a,
+button {
+  font-weight: 500px;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  background-color: #24252a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  margin-bottom: 20px;
+}
+
+.navLinks {
+  /* Remove bullet points */
+  list-style: none;
+}
+
+/* Target each item within the element of class navLinks */
+.navLinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navButton {
+  padding: 9px 25px;
+  /*background-color: rgb(135, 206, 250);*/
+  background-color: rgb(84, 226, 212);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.navButton:hover {
+  background-color: rgba(84, 226, 212, 0.7);
+}
+
+/************************ Game Area ************************/
+.topContainer {
+  width: 75%;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.hintArea {
+  border: solid black;
+  width: 20%;
+  height: 70%;
+
+  display: inline;
+  float: right;
+
+  border-radius: 20px;
+
+  color: white;
+  background: black;
+}
+
+.hintArea:hover {
+  cursor: pointer;
+}
+
+.titleContainer {
+  width: 50%;
+  height: 50px;
+
+  margin: auto;
+
+  text-align: center;
+  padding: 5px;
+
+  font-size: 2em;
+  font-weight: bold;
+
+  border: solid;
+  border-radius: 10px;
+  border-top-color: lightblue;
+  border-left-color: lightblue;
+  border-right-color: lightblue;
+  border-bottom-color: black;
+  border-width: 5px;
+
+  background: rgb(56, 54, 54);
+  color: lightskyblue;
+}
+
+@keyframes mainContainer-animation {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+
+.mainContainer {
+  background-image: linear-gradient(to bottom, beige, #ffe4c4, #ecaf64);
+  background-size: 1000%;
+  animation: mainContainer-animation 5s infinite alternate;
+
+  margin: auto;
+  text-align: center;
+  width: 75%;
+  height: auto;
+  border: solid black;
+  border-radius: 10px;
+}
+
+.wordPairContainer {
+  text-align: left;
+  margin: auto;
+  margin: 20px;
+  width: 100%;
+}
+
+.holderContainer {
+  text-align: center;
+
+  border: solid black;
+  border-radius: 10px;
+  border-width: 4px;
+
+  width: 170.4px;
+
+  background: rgb(56, 54, 54);
+  color: lightcyan;
+
+  /*
+  padding-left: 50px;
+  padding-right: 57px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  */
+}
+
+.wordDisplay {
+  font-size: 1.5em;
+  text-align: center;
+  /*margin: auto;*/
+}
+
+.inputContainers {
+  margin-left: 0;
+  float: left;
+  margin-right: 20px;
+  width: 170.4px;
+}
+
+.actualInput {
+  text-align: center;
+  font-size: 1.5em;
+  width: 170.4px;
+
+  border-radius: 10px;
+  border-color: lightblue;
+  border-style: solid;
+  border-width: 4px;
+
+  background: rgb(56, 54, 54);
+  color: lightcyan;
+
+  transition: 750ms;
+}
+
+.definitionContainer {
+  margin-left: 20px;
+  font-style: oblique;
+  border: solid black;
+  padding: 3px;
+}
+
+/************************************************************/
+.gameTimer {
+  border: solid black;
+  border-radius: 10px;
+
+  margin: 7px;
+  padding: 5px;
+
+  font-size: 1.4em;
+}
+
+.scoreContainer {
+  border: solid black;
+  border-radius: 10px;
+
+  margin: 7px;
+  padding: 5px;
+
+  font-size: 1.4em;
+}
+
+.timeAndScoreContainer {
+  width: 30%;
+  height: 20%;
+
+  margin: auto;
+  margin-top: 15px;
+
+  text-align: center;
+}

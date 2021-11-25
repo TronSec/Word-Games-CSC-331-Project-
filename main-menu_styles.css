@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(65, 61, 61);
+  color: rgb(226, 241, 255);
+}
+
+h2 {
+  color: #9de3f6;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 30px;
+
+  border-bottom: solid #9de3f6;
+}
+
+.selectionArea {
+  text-align: center;
+}
+
+.selectionArea > p {
+  border: solid pink;
+}
+
+.gameCard {
+  background-image: linear-gradient(
+    to bottom,
+    beige,
+    bisque,
+    rgb(240, 197, 144)
+  );
+  margin-left: 40px;
+  margin-right: 40px;
+
+  display: inline-block;
+
+  width: 40%;
+
+  text-align: center;
+  border-radius: 20px;
+}
+
+.gameName {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+
+  background: rgb(65, 61, 61);
+  color: #59d7ee;
+
+  width: 80%;
+
+  margin: auto;
+  margin: 8px;
+  margin-bottom: 15px;
+
+  padding: 10px;
+
+  text-align: center;
+
+  border-radius: 20px;
+}
+
+.gameDescription {
+  font-size: 1.2em;
+  display: inline-block;
+
+  background: #59d7ee;
+  color: rgb(65, 61, 61);
+  border: solid rgb(65, 61, 61);
+
+  width: 80%;
+
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.playButtonArea {
+  display: inline-block;
+
+  width: 80%;
+
+  margin-top: 18px;
+
+  padding: 10px;
+}
+
+.playButton {
+  font-size: 1.3em;
+  font-weight: 550;
+  float: right;
+
+  width: 40%;
+
+  text-align: center;
+  border-radius: 20px;
+
+  background-image: linear-gradient(
+    to right,
+    #d3f4fb,
+    #9de3f6,
+    #59d7ee,
+    #53dfd1
+  );
+
+  background-size: 400%;
+  background-position: left;
+
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.playButton:hover {
+  background-position: right;
+  transform: translateY(-8px);
+}
